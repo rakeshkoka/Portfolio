@@ -1,11 +1,19 @@
-import styles from "./ContactStyles.module.css"
+import styles from "./ContactStyles.module.css";
+import { useForm } from "@formspree/react";
 
 function Contact() {
+
+    const [state, handleSubmit] = useForm('xanynnzg');
+
+    if (state.succeeded) {
+        return <p>Thanks for your message!</p>;
+    }
+
     return (
         <section id="contact" className={styles.container}>
             <h1 className="sectionTitle">Contact</h1>
 
-            <form action="">
+            <form onSubmit={handleSubmit}>
 
                 <div className="formGroup">
                     <label htmlFor="name" hidden>Name</label>
@@ -24,11 +32,12 @@ function Contact() {
                         name="email"
                         id="email"
                         placeholder="Email"
-                        required />
+                        required
+                    />
                 </div>
 
                 <div className="formGroup">
-                    <label htmlFor="name" hidden>Message</label>
+                    <label htmlFor="message" hidden>Message</label>
                     <textarea
                         name="message"
                         id="message"
@@ -41,7 +50,16 @@ function Contact() {
                     type="submit"
                     className="hover btn"
                     value="Submit"
+                    disabled={state.submitting}
                 />
+
+                {/* <button
+                    type="submit"
+                    className="hover btn"
+                    disabled={state.submitting}
+                >
+                    Submit
+                </button> */}
 
             </form>
 
