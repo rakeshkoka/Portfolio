@@ -10,23 +10,23 @@ function Skills() {
                 <SkillList src={checkMarkIcon} skill={"HTML"} />
                 <SkillList src={checkMarkIcon} skill={"CSS"} />
                 <SkillList src={checkMarkIcon} skill={"JavaScript"} />
+                <SkillList src={checkMarkIcon} skill={"Tailwind CSS"} />
                 <SkillList src={checkMarkIcon} skill={"BootStrap"} />
-                <SkillList src={checkMarkIcon} skill={"React"} />
             </div>
             <hr />
             <div className={styles.skillList} >
+                <SkillList src={checkMarkIcon} skill={"React"} />
                 <SkillList src={checkMarkIcon} skill={"Redux"} />
-                <SkillList src={checkMarkIcon} skill={"Express"} />
-                <SkillList src={checkMarkIcon} skill={"Tailwind Css"} />
                 <SkillList src={checkMarkIcon} skill={"Node"} />
+                <SkillList src={checkMarkIcon} skill={"Express"} />
             </div>
             <hr />
             <div className={styles.skillList} >
                 <SkillList src={checkMarkIcon} skill={"Git"} />
-                <SkillList src={checkMarkIcon} skill={"Node"} />
-                <SkillList src={checkMarkIcon} skill={"Tailwind Css"} />
+                <SkillList src={checkMarkIcon} skill={"Git Hub"} />
+                {/* <SkillList src={checkMarkIcon} skill={"Tailwind Css"} />
                 <SkillList src={checkMarkIcon} skill={"Express"} />
-                <SkillList src={checkMarkIcon} skill={"Express"} />
+                <SkillList src={checkMarkIcon} skill={"Express"} /> */}
             </div>
         </section>
     )
